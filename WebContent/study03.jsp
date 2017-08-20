@@ -9,6 +9,8 @@
 <body>
 	<script type="text/javascript">
 	
+		"use strick"; // 指定js 严格模式
+		
 		/*
 		 * js继承实现
 		 */ 
@@ -43,6 +45,19 @@
 		
 		var midStu = new MidStu("张三","13");
 		midStu.show();
+		
+		
+		// 延长变量的作用域
+		var sum = 0;
+		var returnStr = function(){
+			var num = 1;
+			var num2 = 2;
+			sum = num + num2; 
+			
+			return sum;
+		} 
+		var r = returnStr(); // console 3
+		alert(sum);
 	</script>
 </body>
 </html>
